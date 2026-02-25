@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>حاسبة مؤشر كتلة الجسم (BMI)</title>
+    <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <h2>حاسبة مؤشر كتلة الجسم (BMI)</h2>
-        
-        <form action="calculate.php" method="POST" id="bmiForm">
-            
-            <label for="username">الاسم:</label>
-            <input type="text" name="username" id="username" required>
+        <h2>BMI Calculator ⚖️</h2>
+        <form id="bmiForm" action="calculate.php" method="POST">
+            <label>Full Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
-            <label for="weight">الوزن (kg):</label>
-            <input type="number" name="weight" id="weight" step="0.1" required>
+            <label>Weight (kg):</label>
+            <input type="number" step="0.1" name="weight" id="weight" placeholder="e.g. 75" required>
 
-            <label for="height">الطول (m):</label>
-            <input type="number" name="height" id="height" step="0.01" required>
+            <label>Height (m):</label>
+            <input type="number" step="0.01" name="height" id="height" placeholder="e.g. 1.75" required>
 
-            <input type="submit" value="احسب النتيجة">
-            
+            <button type="submit">Calculate Now</button>
         </form>
+        <div id="error-message" style="color: red; margin-top: 10px;"></div>
     </div>
 
     <script src="script.js"></script>
